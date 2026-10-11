@@ -32,7 +32,7 @@ Thực hanh Git và Github
 
 Thành viên/Lớp/MSSV
 
-\- Trưởng nhóm: Nguyễn Trung Hiếu   D23\_TH06   DH52300557
+\- Trưởng nhóm: Nguyễn Trung Hiếu  /  D23\_TH06  /  DH52300557
 
-\- Thành viên 1: Lê Đức Trung Nam   D23\_TH06   DH52301192
+\- Thành viên 1: Lê Đức Trung Nam  /  D23\_TH06  /  DH52301192
 
