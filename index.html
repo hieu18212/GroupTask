@@ -66,18 +66,20 @@
         }
 
         function addTask() {
-            const input = document.getElementById("taskInput");
-            const task = input.value.trim();
+    const input = document.getElementById("taskInput");
+    const task = input.value.trim();
 
-            if (!task) {
-                alert("Vui long nhap cong viec!");
-                return;
-            }
+    if (!task) {
+        alert("Vui long nhap cong viec!");
+        return;
+    }
 
-            tasks.push(task);
-            input.value = "";
-            renderTasks();
-        }
+    tasks.push(task);
+    input.value = "";
+    renderTasks();
+
+    alert("Da them cong viec! Tong so: " + tasks.length);
+}
 
         renderTasks();
     </script>
