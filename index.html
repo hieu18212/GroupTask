@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GroupTask - Quan ly cong viec</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 700px;
+            margin: 40px auto;
+            padding: 20px;
+            background: #f4f6f8;
+        }
+        h1 { color: #2457a7; }
+        .task {
+            background: white;
+            padding: 14px;
+            margin: 10px 0;
+            border-radius: 8px;
+        }
+        button {
+            padding: 8px 12px;
+            cursor: pointer;
+        }
+        input { padding: 8px; width: 65%; }
+    </style>
+</head>
+<body>
+    <h1>GroupTask</h1>
+    <p>Ung dung quan ly cong viec nhom</p>
+
+    <input id="taskInput" placeholder="Nhap cong viec moi">
+    <button onclick="addTask()">Them cong viec</button>
+
+    <h2>Danh sach cong viec</h2>
+    <div id="taskList"></div>
+
+    <script>
+        const tasks = [
+            "Tim hieu Git",
+            "Tao repository GitHub"
+        ];
+
+        function renderTasks() {
+            const list = document.getElementById("taskList");
+            list.innerHTML = "";
+
+            tasks.forEach((task, index) => {
+                const item = document.createElement("div");
+                item.className = "task";
+
+                const content = document.createElement("span");
+                content.textContent = (index + 1) + ". " + task + " ";
+
+                const removeButton = document.createElement("button");
+                removeButton.textContent = "Xoa";
+                removeButton.onclick = () => {
+                    tasks.splice(index, 1);
+                    renderTasks();
+                };
+
+                item.append(content, removeButton);
+                list.appendChild(item);
+            });
+        }
+
+        function addTask() {
+            const input = document.getElementById("taskInput");
+            const task = input.value.trim();
+
+            if (!task) {
+                alert("Vui long nhap cong viec!");
+                return;
+            }
+
+            tasks.push(task);
+            input.value = "";
+            renderTasks();
+        }
+
+        renderTasks();
+    </script>
+</body>
+</html>
