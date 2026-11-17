@@ -33,7 +33,7 @@
     <input id="taskInput" placeholder="Nhap cong viec moi">
     <button onclick="addTask()">Them cong viec</button>
 
-    <h2>Danh sach cong viec</h2>
+    <h2>Danh sach cong viec (<span id="taskCount">0</span>)</h2>
     <div id="taskList"></div>
 
     <script>
@@ -44,7 +44,9 @@
 
         function renderTasks() {
             const list = document.getElementById("taskList");
+            const countSpan = document.getElementById("taskCount");
             list.innerHTML = "";
+            countSpan.textContent = tasks.length;
 
             tasks.forEach((task, index) => {
                 const item = document.createElement("div");
