@@ -4,8 +4,9 @@ body {
     display: flex;
     justify-content: center;
     padding-top: 50px;
-    font-size: 35px;
+    font-size: 40px;
 }
 h2 {
-    color: #007bff;
+    color: #65df0e;
 }
+
